@@ -1,10 +1,5 @@
 package main
 
-import (
-	"strconv"
-	"time"
-)
-
 var playerMap *map[string]int
 
 func indexFromServer(server ServerType) string {
