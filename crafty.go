@@ -145,7 +145,6 @@ func startMcServer(server ServerType) {
 
 	startMcServerCall(filteredServer, bearer)
 
-	scheduleStopServerIfEmpty(server)
 }
 
 func stopMcServer(port int) {
