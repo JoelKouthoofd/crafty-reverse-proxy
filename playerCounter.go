@@ -23,3 +23,14 @@ func getPlayerMap() *map[string]int {
 
 	return playerMap
 }
+
+func decrementPlayerCount(server ServerType) {
+	(*getPlayerMap())[indexFromServer(server)]--
+	if isServerEmpty(server) {
+		scheduleStopServerIfEmpty(server)
+	}
+}
+
+func incrementPlayerCount(server ServerType) {
+	(*getPlayerMap())[indexFromServer(server)]++
+}
